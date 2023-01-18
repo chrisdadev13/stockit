@@ -10,7 +10,7 @@ async function getProfileJson(ticket: string){
 }
 
 export async function getProfileData(ticket:string){
-  if(ticket !== ''){
+  if(ticket === ''){
     const data = await getProfileJson("AAPL");
     const profile = await data[0];
     return profile;
